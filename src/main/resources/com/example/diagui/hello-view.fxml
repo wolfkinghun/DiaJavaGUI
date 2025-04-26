@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.diagui.HelloController">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#onmegnyit" text="Megnyitás" />
+              <MenuItem mnemonicParsing="false" onAction="#onbezar" text="Bezár" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Súgó">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#onnevjegy" text="Névjegy" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <HBox spacing="5.0">
+         <children>
+            <ListView fx:id="lsList" prefHeight="400.0" prefWidth="400.0">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </ListView>
+            <VBox alignment="CENTER" spacing="5.0">
+               <children>
+                  <ComboBox fx:id="cbList" onAction="#onvalaszt" onMousePressed="#onvalaszt" prefWidth="150.0" />
+                  <CheckBox fx:id="cbfekete" mnemonicParsing="false" onAction="#onvalaszt" selected="true" text="fekete?" />
+                  <CheckBox fx:id="cbszines" mnemonicParsing="false" onAction="#onvalaszt" selected="true" text="szines" />
+                  <Label maxHeight="1.7976931348623157E308" prefHeight="300.0" />
+                  <Label fx:id="dbok" text="joaz" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" right="5.0" top="5.0" />
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>
